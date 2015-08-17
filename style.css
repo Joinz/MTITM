@@ -1,0 +1,21 @@
+html, body {
+}
+a {
+    color: #f4f6fa;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+ul.main-menu {
+    width: 380px;
+    font-family: veranda regular;
+    font-size: 16px;
+    color: #f4f6fa;
+    text-shadow: rgba(0,0,0,0.5);
+    background: #2d3239;
+    box-sizing: border-box;
+}
+ul.main-menu li {
+    
+}
