@@ -8,13 +8,26 @@
         <ul class="main-menu">
             <li><a href="#">Сделать ставку</a></li>
             <li><a href="#">Результаты матчей</a></li>
-            <li><a href="#">Правила</a></li>
             <li class="dropdown">
-                <a href="#">Анонсы матчей</a>
+                <a href="#" class="dropdown-toggle">Правила</a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Подкатегория</a></li>
                     <li class="dropdown">
-                        <a href="#">Подкатегория</a>
+                        <a href="#" class="dropdown-toggle">Подкатегория</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Подкатегория 2-го уровня</a></li>
+                            <li><a href="#">Подкатегория 2-го уровня</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Подкатегория</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Анонсы матчей</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Подкатегория</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Подкатегория</a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Подкатегория 2-го уровня</a></li>
                             <li><a href="#">Подкатегория 2-го уровня</a></li>
@@ -27,6 +40,19 @@
             <li><a href="#">Реферальная программа</a></li>
             <li><a href="#">Благотворительность</a></li>
         </ul>
+        <script src="jquery-1.11.2.min.js"></script>
+        <script>
+            window.onload = function() {
+                $("a.dropdown-toggle").click(function() {
+                    if ( $(this).hasClass('active') ) {
+                        $(this).removeClass('active');
+                        $(this).next().slideUp();
+                    } else {
+                        $(this).addClass('active');
+                        $(this).next().slideDown();
+                    }
+                });
+            };
+         </script>
     </body>
-
 </html>
